@@ -2,6 +2,7 @@
 
 require_relative("config/licenses")
 
+# rubocop:disable Metrics/MethodLength
 class << self
   def execute
     ask_for_versions
@@ -99,6 +100,7 @@ class << self
     rails_command("default", abort_on_failure: true, verbose: true)
   end
 end
+# rubocop:enable Metrics/MethodLength
 
 execute
 

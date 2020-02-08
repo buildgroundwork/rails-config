@@ -186,7 +186,9 @@ define_method :be_json_array do
   JsonArrayMatcher.new(JsonMatcherRoot.instance)
 end
 
+# rubocop:disable Naming/PredicateName
 define_method :have_json_element do |*elements|
   JsonElementMatcher.new(JsonMatcherRoot.instance, *elements)
 end
+# rubocop:enable Naming/PredicateName
 
