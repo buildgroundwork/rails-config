@@ -9,6 +9,7 @@ require File.expand_path("../config/environment", __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require "rspec/rails"
+require "rspec/common/all"
 
 Dir[Rails.root.join("spec", "support", "**", "*.rb")].sort.each { |f| require f }
 
@@ -25,11 +26,18 @@ RSpec.configure do |config|
   config.global_fixtures = :all
   config.use_transactional_fixtures = true
 
+  config.include(RSpec::Common::Helpers::ControllerExceptions, type: :controller)
+
+  # For testing devise
   # config.include(Devise::Test::ControllerHelpers, type: :controller)
   # config.include(Devise::Test::ControllerHelpers, type: :view)
-  # config.include(HandleExceptionsInSpecs, type: :controller)
-  # config.include(ActiveStorage::Helpers)
 
+  # For testing ActiveStorage
+  # config.include(RSpec::Common::Helpers::ActiveStorage)
   # config.before { ActiveStorage::Blob.service.reset! }
+
+  # For testing ActiveJob
+  # config.include(ActiveJob::TestHelper)
+  # config.before { clear_enqueued_jobs }
 end
 

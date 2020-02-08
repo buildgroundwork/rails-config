@@ -12,7 +12,7 @@ class << self
 
     add_rubocop_files
     add_rake_files
-    add_spec_support_files
+    add_fixture_builder
 
     after_bundle do
       generate_clean_rspec_files
@@ -68,8 +68,8 @@ class << self
     copy_file("lib/tasks/default.rake")
   end
 
-  def add_spec_support_files
-    directory("spec/support")
+  def add_fixture_builder
+    copy_file("spec/support/fixture_builder.rb")
   end
 
   def generate_clean_rspec_files
