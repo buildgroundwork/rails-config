@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require File.join(File.dirname(__FILE__), "config", "licenses")
+require_relative("config/licenses")
 
 class << self
   def execute
