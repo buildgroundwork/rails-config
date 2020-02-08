@@ -1,6 +1,7 @@
 inherit_from:
   - .rubocop_enabled.yml
   - .rubocop_disabled.yml
+  - .rubocop_rspec.yml
 
 require:
   - rubocop-rails

@@ -56,6 +56,7 @@ class << self
     copy_file(".rubocop.yml")
     copy_file(".rubocop_enabled.yml")
     copy_file(".rubocop_disabled.yml")
+    copy_file(".rubocop_rspec.yml")
   end
 
   def add_rake_files
