@@ -10,6 +10,7 @@ gem "bootsnap", require: false
 gem "jbuilder"
 gem "pg"
 gem "puma"
+gem "rails-boost", github: "buildgroundwork/rails-boost"
 gem "webpacker"
 
 group :development do
