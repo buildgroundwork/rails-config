@@ -1,0 +1,13 @@
+--database=postgresql
+--skip-action-mailer
+--skip-action-mailbox
+--skip-action-text
+--skip-action-cable
+--skip-sprockets
+--skip-spring
+--skip-listen
+--skip-turbolinks
+--skip-test
+--skip-system-test
+--template=~/.rails/template.rb
+
