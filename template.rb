@@ -88,7 +88,7 @@ class << self
 
   def whitelist_acceptable_licenses
     Config::Licenses.acceptable.each do |license|
-      run("license_finder whitelist add '#{license}'")
+      run("license_finder permitted_licenses add '#{license}'")
     end
 
     Config::Licenses.special_cases.each do |license, why|
