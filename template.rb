@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative("config/licenses")
-
 # rubocop:disable Metrics/MethodLength
 class << self
   def execute
@@ -13,11 +11,11 @@ class << self
     add_rubocop_files
     add_rake_files
     add_fixture_builder
+    add_license_finder_decisions
 
     after_bundle do
       generate_clean_rspec_files
       fix_rubocop_issues
-      whitelist_acceptable_licenses
       run_rake
 
       singleton_class.remove_method(:source_paths)
@@ -72,6 +70,10 @@ class << self
     copy_file("spec/support/fixture_builder.rb")
   end
 
+  def add_license_finder_decisions
+    copy_file("doc/dependency_decisions.yml")
+  end
+
   def generate_clean_rspec_files
     generate("rspec:install")
 
@@ -84,16 +86,6 @@ class << self
 
   def fix_rubocop_issues
     run("rubocop --auto-correct --out /dev/null")
-  end
-
-  def whitelist_acceptable_licenses
-    Config::Licenses.acceptable.each do |license|
-      run("license_finder permitted_licenses add '#{license}'")
-    end
-
-    Config::Licenses.special_cases.each do |license, why|
-      run("license_finder approvals add '#{license}' --why='#{why}'")
-    end
   end
 
   def run_rake
