@@ -1,32 +1,32 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '<%= ruby_version -%>'
-gem 'rails', '<%= [*rails_version_specifier(rails_version)].join("', '") %>'
+ruby "<%= ruby_version -%>"
+gem "rails", "<%= [*rails_version_specifier(rails_version)].join('", "') %>"
 
-gem 'bootsnap', require: false
-gem 'jbuilder'
-gem 'pg'
-gem 'puma'
-gem 'webpacker'
+gem "bootsnap", require: false
+gem "jbuilder"
+gem "pg"
+gem "puma"
+gem "webpacker"
 
 group :development do
-  gem 'brakeman', require: false
-  gem 'license_finder', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'web-console'
+  gem "brakeman", require: false
+  gem "license_finder", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
+  gem "web-console"
 end
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri]
-  gem 'fixture_builder'
-  gem 'rails-controller-testing'
-  gem 'rspec-collection_matchers'
-  gem 'rspec-its'
+  gem "byebug", platforms: [:mri]
+  gem "fixture_builder"
+  gem "rails-controller-testing"
+  gem "rspec-collection_matchers"
+  gem "rspec-its"
   # RSpec is not yet compatible with Rails 6.
-  gem 'rspec-rails', '~> 4.0.0.beta4'
+  gem "rspec-rails", "~> 4.0.0.beta4"
 end
 

@@ -3,7 +3,7 @@
 module ActiveStorage::Helpers
   # Create a new 'upload' that is compatible with what ActionController expects
   # to receive.
-  def fixture_upload(content: 'test content', filename: 'text.csv', content_type: 'text/csv')
+  def fixture_upload(content: "test content", filename: "text.csv", content_type: "text/csv")
     io = StringIO.new(content)
     Rack::Test::UploadedFile.new(io, content_type, original_filename: filename).tap do |test_file|
       # This works around the erroneous assumption in ActiveStorage that all IO

@@ -178,11 +178,10 @@ Style/Semicolon:
     - spec/**/*
 
 Style/StringLiterals:
+  EnforcedStyle: double_quotes
   Exclude:
     # auto-generated
     - bin/**/*
-    # Rspec snippets are everywhere.
-    - spec/**/*
 
 # Ignore auto-generated files, and the like.
 Style/SymbolArray:

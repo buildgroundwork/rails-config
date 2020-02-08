@@ -55,7 +55,7 @@ class JsonElementMatcher
   end
 
   def description
-    'have JSON element'
+    "have JSON element"
   end
 
   private
@@ -80,7 +80,7 @@ class JsonArrayMatcher
   end
 
   def description
-    'be JSON array'
+    "be JSON array"
   end
 
   private
@@ -108,7 +108,7 @@ class JsonLengthMatcher
   end
 
   def description
-    'have length'
+    "have length"
   end
 
   private
@@ -134,11 +134,11 @@ class JsonContainsMatcher
   end
 
   def failure_message
-    parent.failure_message + ' containing a specific element'
+    parent.failure_message + " containing a specific element"
   end
 
   def description
-    'contain JSON element'
+    "contain JSON element"
   end
 
   private
@@ -158,7 +158,7 @@ class JsonMatcherAnd
   end
 
   def failure_message
-    parent.failure_message + ' and'
+    parent.failure_message + " and"
   end
 end
 

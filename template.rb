@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require File.join(File.dirname(__FILE__), 'config', 'licenses')
+require File.join(File.dirname(__FILE__), "config", "licenses")
 
 class << self
   def execute
@@ -24,7 +24,7 @@ class << self
   end
 
   def source_paths
-    [File.join(File.dirname(__FILE__), 'templates')]
+    [File.join(File.dirname(__FILE__), "templates")]
   end
 
   private
@@ -43,45 +43,45 @@ class << self
   end
 
   def generate_clean_gemfile
-    remove_file('Gemfile', verbose: false)
-    template('Gemfile', ruby_version: ruby_version, rails_version: rails_version)
+    remove_file("Gemfile", verbose: false)
+    template("Gemfile", ruby_version: ruby_version, rails_version: rails_version)
   end
 
   def generate_clean_database_yml
-    remove_file('config/database.yml', verbose: false)
-    template('config/database.yml')
+    remove_file("config/database.yml", verbose: false)
+    template("config/database.yml")
   end
 
   def add_rubocop_files
-    copy_file('.rubocop.yml')
-    copy_file('.rubocop_enabled.yml')
-    copy_file('.rubocop_disabled.yml')
+    copy_file(".rubocop.yml")
+    copy_file(".rubocop_enabled.yml")
+    copy_file(".rubocop_disabled.yml")
   end
 
   def add_rake_files
-    copy_file('lib/tasks/brakeman.rake')
-    copy_file('lib/tasks/rubocop.rake')
-    copy_file('lib/tasks/license_finder.rake')
+    copy_file("lib/tasks/brakeman.rake")
+    copy_file("lib/tasks/rubocop.rake")
+    copy_file("lib/tasks/license_finder.rake")
 
-    copy_file('lib/tasks/default.rake')
+    copy_file("lib/tasks/default.rake")
   end
 
   def add_spec_support_files
-    directory('spec/support')
+    directory("spec/support")
   end
 
   def generate_clean_rspec_files
-    generate('rspec:install')
+    generate("rspec:install")
 
-    remove_file('spec/spec_helper.rb', verbose: false)
-    copy_file('spec/spec_helper.rb')
+    remove_file("spec/spec_helper.rb", verbose: false)
+    copy_file("spec/spec_helper.rb")
 
-    remove_file('spec/rails_helper.rb', verbose: false)
-    copy_file('spec/rails_helper.rb')
+    remove_file("spec/rails_helper.rb", verbose: false)
+    copy_file("spec/rails_helper.rb")
   end
 
   def fix_rubocop_issues
-    run('rubocop --auto-correct --out /dev/null')
+    run("rubocop --auto-correct --out /dev/null")
   end
 
   def whitelist_acceptable_licenses
@@ -95,7 +95,7 @@ class << self
   end
 
   def run_rake
-    rails_command('default', abort_on_failure: true, verbose: true)
+    rails_command("default", abort_on_failure: true, verbose: true)
   end
 end
 
