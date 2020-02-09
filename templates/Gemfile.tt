@@ -15,9 +15,9 @@ gem "webpacker"
 
 group :development do
   gem "brakeman", require: false
+  gem "groundwork-style", require: false, github: "buildgroundwork/groundwork-style"
   gem "license_finder", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-rspec", require: false
+  gem "rubocop", github: "buildgroundwork/rubocop"
   gem "web-console"
 end
 

@@ -53,9 +53,6 @@ class << self
 
   def add_rubocop_files
     copy_file(".rubocop.yml")
-    copy_file(".rubocop_enabled.yml")
-    copy_file(".rubocop_disabled.yml")
-    copy_file(".rubocop_rspec.yml")
   end
 
   def add_rake_files
@@ -85,7 +82,7 @@ class << self
   end
 
   def fix_rubocop_issues
-    run("rubocop --auto-correct --out /dev/null")
+    run("bundle exec rubocop --auto-correct --out /dev/null")
   end
 
   def run_rake
