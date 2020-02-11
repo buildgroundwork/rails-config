@@ -1,121 +1,139 @@
 ---
 - - :permit
   - MIT
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:24.339890000 Z
 - - :permit
   - Apache 2.0
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:24.792442000 Z
 - - :permit
   - ruby
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:25.194942000 Z
 - - :permit
   - ISC
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:25.706026000 Z
 - - :permit
   - Simplified BSD
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:26.089302000 Z
 - - :permit
   - New BSD
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:26.464608000 Z
 - - :permit
   - CC0-1.0
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:26.841239000 Z
 - - :permit
   - WTFPL
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:27.233586000 Z
 - - :permit
   - Unlicense
-  - :who: 
-    :why: 
+  - :who:
+    :why:
     :versions: []
     :when: 2020-01-21 20:28:27.703322000 Z
 - - :approve
   - amdefine
-  - :who: 
+  - :who:
     :why: Dual license; using MIT
     :versions: []
     :when: 2020-01-21 20:28:28.085249000 Z
 - - :approve
   - async-foreach
-  - :who: 
+  - :who:
     :why: Uses MIT; license file differs from norm in whitespace only
     :versions: []
     :when: 2020-01-21 20:28:28.459462000 Z
 - - :approve
   - atob
-  - :who: 
+  - :who:
     :why: Dual license; using MIT
     :versions: []
     :when: 2020-01-21 20:28:28.906677000 Z
 - - :approve
   - json-schema
-  - :who: 
+  - :who:
     :why: Dual license; using BSD-3-Clause
     :versions: []
     :when: 2020-01-21 20:28:29.373457000 Z
 - - :approve
   - node-forge
-  - :who: 
+  - :who:
     :why: Dual license; using BSD-3-Clause
     :versions: []
     :when: 2020-01-21 20:28:29.753075000 Z
 - - :approve
   - pako
-  - :who: 
+  - :who:
     :why: Dual license; using MIT
     :versions: []
     :when: 2020-01-21 20:28:30.126445000 Z
 - - :approve
   - path-is-inside
-  - :who: 
+  - :who:
     :why: Dual license; using MIT
     :versions: []
     :when: 2020-01-21 20:28:30.502093000 Z
 - - :approve
   - sha.js
-  - :who: 
+  - :who:
     :why: Dual license; using MIT
     :versions: []
     :when: 2020-01-21 20:28:30.891672000 Z
 - - :approve
   - type-fest
-  - :who: 
+  - :who:
     :why: Dual license; using MIT
     :versions: []
     :when: 2020-02-04 02:55:19.344117000 Z
 - - :approve
   - sidekiq
-  - :who: 
+  - :who:
     :why: Sidekiq-Pro license overrides Sidekiq license
     :versions: []
     :when: 2020-02-06 20:52:52.189040000 Z
 - - :approve
   - sidekiq-pro
-  - :who: 
+  - :who:
     :why: Commercial license, receipt# 78DCF5FA-0001
     :versions: []
     :when: 2020-02-06 20:53:06.326514000 Z
+- - :approve
+  - brakeman
+  - :who:
+    :why: Approved by legal review
+    :versions: []
+    :when: 2020-02-10 15:13:46.705334000 Z
+- - :approve
+  - caniuse-lite
+  - :who:
+    :why: Approved by legal review
+    :versions: []
+    :when: 2020-02-10 15:14:29.347036000 Z
+- - :approve
+  - spdx-exceptions
+  - :who:
+    :why: Approved by legal review
+    :versions: []
+    :when: 2020-02-10 15:14:41.174494000 Z
